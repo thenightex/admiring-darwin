@@ -14,11 +14,11 @@ export function logError(error: unknown, extra: Record<string, any> = {}) {
       "error.stack": error instanceof Error ? error.stack : undefined,
       "error.name": error instanceof Error ? error.name : undefined,
 
-      // 🔗 trace correlation
+      // trace correlation
       "trace_id": span?.spanContext().traceId,
       "span_id": span?.spanContext().spanId,
 
-      // 🌍 useful frontend context
+      // useful frontend context
       "url": window.location.href,
       "user_agent": navigator.userAgent,
 
