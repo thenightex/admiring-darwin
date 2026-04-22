@@ -1,0 +1,4 @@
+# othellog
+
+- nvm use
+- 

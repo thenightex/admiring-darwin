@@ -1,2 +1,3 @@
 # admiring-darwin
-vue utils
+
+- error logging otel (logs, context, trace)
