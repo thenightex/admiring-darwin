@@ -1,2 +1,3 @@
 import { logError } from './logger'
-export { logError }
+import { useErrorLogger } from './composables/useErrorLogger'
+export { logError, useErrorLogger }
