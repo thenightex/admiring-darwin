@@ -15,12 +15,12 @@ export function logError(error: unknown, extra: Record<string, any> = {}) {
       "error.name": error instanceof Error ? error.name : undefined,
 
       // trace correlation
-      "trace_id": span?.spanContext().traceId,
-      "span_id": span?.spanContext().spanId,
+      trace_id: span?.spanContext().traceId,
+      span_id: span?.spanContext().spanId,
 
       // useful frontend context
-      "url": window.location.href,
-      "user_agent": navigator.userAgent,
+      url: window.location.href,
+      user_agent: navigator.userAgent,
 
       ...extra,
     },

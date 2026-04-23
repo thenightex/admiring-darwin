@@ -1,53 +1,48 @@
 {
   "name": "@thenightex/othellog",
   "version": "1.0.0",
-  "type": "module",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/othellog.umd.cjs",
-  "module": "./dist/othellog.js",
-  "exports": {
-    ".": {
-      "import": "./dist/othellog.js",
-      "require": "./dist/othellog.umd.cjs"
-    }
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
-    "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check",
-    "preview": "vite preview",
-    "prepublish": "npm run build"
-  },
-  "devDependencies": {
-    "oxfmt": "^0.46.0",
-    "oxlint": "^1.61.0",
-    "typescript": "~6.0.2",
-    "vite": "^8.0.9"
-  },
-  "engines": {
-    "node": ">=24.14",
-    "pnpm": ">=10"
-  },
-  "dependencies": {
-    "@opentelemetry/api": "^1.9.1",
-    "@opentelemetry/api-logs": "^0.215.0"
+  "author": {
+    "name": "Sascha Hanke",
+    "email": "s.hanke1316@gmail.com"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thenightex/admiring-darwin.git",
     "directory": "packages/othellog"
   },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/othellog.umd.cjs",
+  "module": "./dist/othellog.js",
+  "types": "types.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/othellog.js",
+      "require": "./dist/othellog.umd.cjs"
+    }
+  },
   "publishConfig": {
     "access": "public"
   },
-  "author": {
-    "email": "s.hanke1316@gmail.com",
-    "name": "Sascha Hanke"
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prepublish": "npm run build"
   },
-  "types": "types.d.ts"
+  "dependencies": {
+    "@antfu/eslint-config": "^8.2.0",
+    "@opentelemetry/api": "^1.9.1",
+    "@opentelemetry/api-logs": "^0.215.0"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2",
+    "vite": "^8.0.9"
+  },
+  "engines": {
+    "node": ">=24.14",
+    "pnpm": ">=10"
+  }
 }
