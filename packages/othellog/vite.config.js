@@ -1,8 +1,15 @@
 // @ts-check
 import { resolve } from 'node:path'
+import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  plugins: [
+    AutoImport({
+      dts: true,
+      dirs: ['./src/composables', './src/utils'],
+    }),
+  ],
   resolve: {
     alias: {
       '~/': `${resolve(__dirname, 'src')}/`,
@@ -13,20 +20,19 @@ export default defineConfig({
     lib: {
       entry: resolve(import.meta.dirname, 'src/main.js'),
       name: 'othellog',
-      // the proper extensions will be added
       fileName: 'othellog',
     },
+    /*
     rolldownOptions: {
-      // make sure to externalize deps that shouldn't be bundled
-      // into your library
+      // externalize deps that shouldn't be bundled into lib
       external: ['vue'],
       output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
+        // externalized deps for UMD build
         globals: {
           vue: 'Vue',
         },
       },
     },
+    */
   },
 })

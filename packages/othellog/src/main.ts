@@ -1,4 +1,4 @@
-import { useErrorLogger } from './composables/useErrorLogger'
-import { logError } from './logger'
+import { useErrorLogger } from '~/composables/useErrorLogger'
+import { logError, logMessage } from '~/utils/logger'
 
-export { logError, useErrorLogger }
+export { logError, logMessage, useErrorLogger }

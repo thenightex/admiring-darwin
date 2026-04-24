@@ -1,5 +1,3 @@
-import { logError, logMessage } from '../logger'
-
 type ErrorContext = Record<string, any>
 interface ErrorLogger {
   capture: (error: unknown, context?: ErrorContext) => void
