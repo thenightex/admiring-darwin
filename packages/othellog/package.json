@@ -8,8 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thenightex/admiring-darwin.git",
-    "directory": "packages/othellog"
+    "url": "https://github.com/thenightex/admiring-darwin.git"
   },
   "files": [
     "dist"

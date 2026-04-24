@@ -7,7 +7,8 @@
     "csstools.postcss",
     "dbaeumer.vscode-eslint",
     "streetsidesoftware.code-spell-checker",
-    "mohammadbaqer.better-folding"
+    "mohammadbaqer.better-folding",
+    "github.vscode-github-actions"
   ]
 }
 
