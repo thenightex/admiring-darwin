@@ -33,6 +33,10 @@ jobs:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Commit version
-      run: git commit -m 'publish patch [skip ci]' && git push
+      run: |
+        git commit -m 'publish patch [skip ci]'
+        git push
+        git config --global user.email "s.hanke1316@gmail.com"
+        git config --global user.name "Github Actions"
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
