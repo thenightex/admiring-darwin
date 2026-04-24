@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "antfu.iconify",
+    "antfu.unocss",
+    "antfu.vite",
+    "antfu.goto-alias",
+    "csstools.postcss",
+    "dbaeumer.vscode-eslint",
+    "streetsidesoftware.code-spell-checker",
+    "mohammadbaqer.better-folding"
+  ]
+}
+

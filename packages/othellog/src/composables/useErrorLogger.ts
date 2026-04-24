@@ -1,9 +1,22 @@
-import { logError } from "../logger";
+import { logError, logMessage } from '../logger'
 
-export function useErrorLogger() {
-  function capture(error: unknown, context: Record<string, any> = {}) {
-    logError(error, context);
+type ErrorContext = Record<string, any>
+interface ErrorLogger {
+  capture: (error: unknown, context?: ErrorContext) => void
+  captureMessage: (message: string, context?: ErrorContext) => void
+}
+
+export function useErrorLogger(): ErrorLogger {
+  function capture(error: unknown, context: ErrorContext = {}): void {
+    logError(error, context)
   }
 
-  return { capture };
+  function captureMessage(message: string, context: ErrorContext = {}): void {
+    logMessage(message, context)
+  }
+
+  return {
+    capture,
+    captureMessage,
+  }
 }

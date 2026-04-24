@@ -1,28 +1,52 @@
-import { logs } from "@opentelemetry/api-logs";
-import { context, trace } from "@opentelemetry/api";
+import { context, trace } from '@opentelemetry/api'
+import { logs } from '@opentelemetry/api-logs'
 
-const logger = logs.getLogger("frontend");
+const logger = logs.getLogger('frontend')
 
-export function logError(error: unknown, extra: Record<string, any> = {}) {
-  const span = trace.getSpan(context.active());
+export function logError(error: unknown, extra: Record<string, any> = {}): void {
+  const span = trace.getSpan(context.active())
 
   logger.emit({
     severityNumber: 17,
-    severityText: "ERROR",
+    severityText: 'ERROR',
     body: error instanceof Error ? error.message : String(error),
     attributes: {
-      "error.stack": error instanceof Error ? error.stack : undefined,
-      "error.name": error instanceof Error ? error.name : undefined,
+      'error.stack': error instanceof Error ? error.stack : undefined,
+      'error.name': error instanceof Error ? error.name : undefined,
 
       // trace correlation
-      trace_id: span?.spanContext().traceId,
-      span_id: span?.spanContext().spanId,
+      'trace_id': span?.spanContext().traceId,
+      'span_id': span?.spanContext().spanId,
 
       // useful frontend context
-      url: window.location.href,
-      user_agent: navigator.userAgent,
+      'url': window.location.href,
+      'user_agent': navigator.userAgent,
 
       ...extra,
     },
-  });
+  })
+}
+
+export function logMessage(message: string, extra: Record<string, any> = {}, errorStack?: string, errorName?: string): void {
+  const span = trace.getSpan(context.active())
+
+  logger.emit({
+    severityNumber: 17,
+    severityText: 'ERROR',
+    body: message,
+    attributes: {
+      'error.stack': errorStack,
+      'error.name': errorName,
+
+      // trace correlation
+      'trace_id': span?.spanContext().traceId,
+      'span_id': span?.spanContext().spanId,
+
+      // useful frontend context
+      'url': window.location.href,
+      'user_agent': navigator.userAgent,
+
+      ...extra,
+    },
+  })
 }

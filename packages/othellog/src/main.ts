@@ -1,3 +1,4 @@
-import { logError } from "./logger";
-import { useErrorLogger } from "./composables/useErrorLogger";
-export { logError, useErrorLogger };
+import { useErrorLogger } from './composables/useErrorLogger'
+import { logError } from './logger'
+
+export { logError, useErrorLogger }

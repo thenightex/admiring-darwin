@@ -1,4 +1,4 @@
-declare module "@thenightex/othellog" {
-  const othellog: any;
-  export = othellog;
+declare module '@thenightex/othellog' {
+  const othellog: any
+  export = othellog
 }
