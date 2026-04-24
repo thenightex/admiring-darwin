@@ -11,33 +11,46 @@ jobs:
     
     permissions:
       packages: write
-      contents: write
 
     steps:
     - uses: actions/checkout@v6
+      with:
+        fetch-depth: 2  # needed to access previous commit
 
     - name: Set up Node.js
       uses: actions/setup-node@v6
       with:
         node-version: '24'
         registry-url: 'https://npm.pkg.github.com'
-
-    - name: Minor Update
-      working-directory: ./packages/othellog
-      run: npm version patch
-      
-    - name: Commit version
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Get current version
+      id: current
       run: |
-        git config --global user.email "s.hanke1316@gmail.com"
-        git config --global user.name "Github Actions"
-        git add ./packages/othellog/package.json
-        git commit -m 'publish patch [skip ci]'
-        git push
+        VERSION=$(node -p "require('./packages/othellog/package.json').version")
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        
+    - name: Get previous version
+      id: previous
+      run: |
+        VERSION=$(git show HEAD~1:packages/othellog/package.json | node -p "JSON.parse(require('fs').readFileSync(0)).version")
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+    - name: Check if version changed
+      id: version_check
+      run: |
+        if [ "${{ steps.current.outputs.version }}" = "${{ steps.previous.outputs.version }}" ]; then
+          echo "changed=false" >> $GITHUB_OUTPUT
+        else
+          echo "changed=true" >> $GITHUB_OUTPUT
+        fi
 
     - name: Publish to GitHub Packages
+      if: steps.version_check.outputs.changed == 'true'
       working-directory: ./packages/othellog
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: npm publish
+      
+    - name: Skip message
+      if: steps.version_check.outputs.changed == 'false'
+      run: echo "Version unchanged. Skipping publish."
