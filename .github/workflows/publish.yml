@@ -1,5 +1,8 @@
 name: Publish Package
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   push:
     branches:
@@ -10,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     
     permissions:
-      contents: read
       packages: write
+      contents: read
 
     steps:
     - uses: actions/checkout@v2
