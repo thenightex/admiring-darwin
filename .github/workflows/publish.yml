@@ -18,9 +18,11 @@ jobs:
         registry-url: 'https://npm.pkg.github.com'
 
     - name: Minor Update
+      working-directory: ./packages/othellog
       run: npm version patch
 
     - name: Publish to GitHub Packages
+      working-directory: ./packages/othellog
       run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
