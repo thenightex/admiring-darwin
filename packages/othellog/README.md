@@ -24,4 +24,3 @@
 - migrate to oxlint+oxfmt? currently no template support for vue?
   - use oxlint together with eslint, speed vs coverage
 - replicate package template with vue+css
-- test deploy
