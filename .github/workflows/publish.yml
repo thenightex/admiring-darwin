@@ -31,3 +31,8 @@ jobs:
       run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Commit version
+        run: |
+          git commit -m "publish patch [skip ci]"
+          git push

@@ -3,10 +3,8 @@
 
 ## othellog
 - nvm use ./ (https://github.com/nvm-sh/nvm)
-  - migration to mise (https://mise.jdx.dev/getting-started.html)
 - pnpm install (https://github.com/pnpm/pnpm)
 - pnpm run build
-
 
 ## fnm - node
 - mise vs fnm? nvm (https://github.com/nvm-sh/nvm) eig gut aber nicht auf windows
@@ -24,4 +22,5 @@
 
 ## todo
 - migrate to oxlint+oxfmt? currently no template support for vue?
+  - use oxlint together with eslint, speed vs coverage
 - replicate package template with vue+css

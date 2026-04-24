@@ -33,8 +33,7 @@
     "prepublish": "npm run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "sizecheck": "npx vite-bundle-visualizer",
-    "pub": "npm publish --registry=https://npm.pkg.github.com"
+    "sizecheck": "npx vite-bundle-visualizer"
   },
   "dependencies": {
     "@antfu/eslint-config": "^8.2.0",
