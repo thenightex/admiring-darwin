@@ -2,12 +2,20 @@
 import { resolve } from 'node:path'
 import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
   plugins: [
     AutoImport({
-      dts: true,
-      dirs: ['./src/composables', './src/utils'],
+      dts: 'src/auto-imports.d.ts',
+      dirs: [
+        './src/composables',
+        './src/utils',
+      ],
+    }),
+    dts({
+      insertTypesEntry: true,
+      rollupTypes: true,
     }),
   ],
   resolve: {
