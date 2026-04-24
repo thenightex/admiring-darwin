@@ -8,15 +8,16 @@ importers:
 
   .:
     dependencies:
-      '@antfu/eslint-config':
-        specifier: ^8.2.0
-        version: 8.2.0(@typescript-eslint/rule-tester@8.59.0(eslint@10.2.1)(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.59.0(typescript@6.0.3))(@typescript-eslint/utils@8.59.0(eslint@10.2.1)(typescript@6.0.3))(@vue/compiler-sfc@3.5.33)(eslint-plugin-format@2.0.1(eslint@10.2.1))(eslint@10.2.1)(oxlint@1.61.0)(typescript@6.0.3)
       '@opentelemetry/api':
         specifier: ^1.9.1
         version: 1.9.1
       '@opentelemetry/api-logs':
         specifier: ^0.215.0
         version: 0.215.0
+    devDependencies:
+      '@antfu/eslint-config':
+        specifier: ^8.2.0
+        version: 8.2.0(@typescript-eslint/rule-tester@8.59.0(eslint@10.2.1)(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.59.0(typescript@6.0.3))(@typescript-eslint/utils@8.59.0(eslint@10.2.1)(typescript@6.0.3))(@vue/compiler-sfc@3.5.33)(eslint-plugin-format@2.0.1(eslint@10.2.1))(eslint@10.2.1)(oxlint@1.61.0)(typescript@6.0.3)
       '@types/node':
         specifier: ^25.6.0
         version: 25.6.0
@@ -26,16 +27,15 @@ importers:
       eslint-plugin-format:
         specifier: ^2.0.1
         version: 2.0.1(eslint@10.2.1)
-      vite-bundle-visualizer:
-        specifier: ^1.2.1
-        version: 1.2.1
-    devDependencies:
       typescript:
         specifier: ~6.0.2
         version: 6.0.3
       vite:
         specifier: ^8.0.9
         version: 8.0.9(@types/node@25.6.0)(yaml@2.8.3)
+      vite-bundle-visualizer:
+        specifier: ^1.2.1
+        version: 1.2.1
 
 packages:
 
