@@ -33,9 +33,11 @@
     "prepublish": "npm run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "sizecheck": "npx vite-bundle-visualizer"
+    "sizecheck": "npx vite-bundle-visualizer",
+    "taze": "npx taze"
   },
   "dependencies": {
+    "@microsoft/api-extractor": "^7.58.7",
     "@opentelemetry/api": "^1.9.1",
     "@opentelemetry/api-logs": "^0.215.0"
   },
@@ -43,12 +45,14 @@
     "@antfu/eslint-config": "^8.2.0",
     "@types/node": "^25.6.0",
     "eslint": "^10.2.1",
+    "eslint-flat-config-utils": "^3.1.0",
     "eslint-plugin-format": "^2.0.1",
+    "taze": "^19.11.0",
     "typescript": "~6.0.2",
     "unplugin-auto-import": "^21.0.0",
+    "unplugin-dts": "1.0.0-beta.6",
     "vite": "^8.0.9",
-    "vite-bundle-visualizer": "^1.2.1",
-    "vite-plugin-dts": "^4.5.4"
+    "vite-bundle-visualizer": "^1.2.1"
   },
   "engines": {
     "node": ">=24.14",

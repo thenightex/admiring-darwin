@@ -1,6 +1,7 @@
 // @ts-check
 import antfu from '@antfu/eslint-config'
 
+/** @type {import('eslint-flat-config-utils').FlatConfigComposer<any, any>} */
 export default antfu(
   {
     type: 'lib',

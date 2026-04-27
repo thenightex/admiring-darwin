@@ -1,8 +1,8 @@
 // @ts-check
 import { resolve } from 'node:path'
 import AutoImport from 'unplugin-auto-import/vite'
+import dts from 'unplugin-dts/vite'
 import { defineConfig } from 'vite'
-import dts from 'vite-plugin-dts'
 
 export default defineConfig({
   plugins: [
@@ -15,7 +15,8 @@ export default defineConfig({
     }),
     dts({
       insertTypesEntry: true,
-      rollupTypes: true,
+      bundleTypes: true,
+      tsconfigPath: './tsconfig.json',
     }),
   ],
   resolve: {
