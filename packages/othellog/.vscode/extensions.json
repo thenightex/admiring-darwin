@@ -8,7 +8,9 @@
     "dbaeumer.vscode-eslint",
     "streetsidesoftware.code-spell-checker",
     "mohammadbaqer.better-folding",
-    "github.vscode-github-actions"
+    "github.vscode-github-actions",
+    "usernamehw.errorlens",
+    "oxc.oxc-vscode"
   ]
 }
 

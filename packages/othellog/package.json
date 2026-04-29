@@ -51,6 +51,7 @@
     "eslint-plugin-oxlint": "^1.62.0",
     "eslint-plugin-pnpm": "^1.6.0",
     "eslint-plugin-unicorn": "^64.0.0",
+    "oxlint": "^1.62.0",
     "taze": "^19.11.0",
     "typescript": "~6.0.2",
     "unplugin-auto-import": "^21.0.0",
