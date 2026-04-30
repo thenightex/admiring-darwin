@@ -27,7 +27,7 @@ export default defineConfig({
 
   build: {
     lib: {
-      entry: path.resolve(import.meta.dirname, 'src/main.ts'),
+      entry: path.resolve(import.meta.dirname, 'src/index.ts'),
       name: 'othellog',
       fileName: 'othellog',
     },
