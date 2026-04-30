@@ -1,7 +1,7 @@
 // @ts-check
 import path from 'node:path'
 import AutoImport from 'unplugin-auto-import/vite'
-// import dts from 'unplugin-dts/vite'
+import dts from 'unplugin-dts/vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -13,13 +13,11 @@ export default defineConfig({
         './src/utils',
       ],
     }),
-    /*
     dts({
       insertTypesEntry: true,
       bundleTypes: true,
       tsconfigPath: './tsconfig.json',
     }),
-    */
   ],
   resolve: {
     alias: {
@@ -29,11 +27,10 @@ export default defineConfig({
 
   build: {
     lib: {
-      entry: path.resolve(import.meta.dirname, 'src/main.js'),
+      entry: path.resolve(import.meta.dirname, 'src/main.ts'),
       name: 'othellog',
       fileName: 'othellog',
     },
-    /*
     rolldownOptions: {
       // externalize deps that shouldn't be bundled into lib
       external: ['vue'],
@@ -44,6 +41,5 @@ export default defineConfig({
         },
       },
     },
-    */
   },
 })
