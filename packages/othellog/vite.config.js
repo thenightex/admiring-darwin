@@ -1,7 +1,7 @@
 // @ts-check
-import { resolve } from 'node:path'
+import path from 'node:path'
 import AutoImport from 'unplugin-auto-import/vite'
-import dts from 'unplugin-dts/vite'
+// import dts from 'unplugin-dts/vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -13,21 +13,23 @@ export default defineConfig({
         './src/utils',
       ],
     }),
+    /*
     dts({
       insertTypesEntry: true,
       bundleTypes: true,
       tsconfigPath: './tsconfig.json',
     }),
+    */
   ],
   resolve: {
     alias: {
-      '~/': `${resolve(__dirname, 'src')}/`,
+      '~/': `${path.resolve(import.meta.dirname, 'src')}/`,
     },
   },
 
   build: {
     lib: {
-      entry: resolve(import.meta.dirname, 'src/main.js'),
+      entry: path.resolve(import.meta.dirname, 'src/main.js'),
       name: 'othellog',
       fileName: 'othellog',
     },

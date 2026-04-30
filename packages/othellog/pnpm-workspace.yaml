@@ -3,3 +3,22 @@ shellEmulator: true
 trustPolicy: no-downgrade
 
 packages: []
+catalog:
+  '@antfu/eslint-config': ^8.2.0
+  '@microsoft/api-extractor': ^7.58.7
+  '@opentelemetry/api': ^1.9.1
+  '@opentelemetry/api-logs': ^0.215.0
+  '@types/node': ^25.6.0
+  eslint: ^10.2.1
+  eslint-flat-config-utils: ^3.1.0
+  eslint-plugin-format: ^2.0.1
+  eslint-plugin-oxlint: ^1.62.0
+  eslint-plugin-pnpm: ^1.6.0
+  eslint-plugin-unicorn: ^64.0.0
+  oxlint: ^1.62.0
+  taze: ^19.11.0
+  typescript: ~6.0.2
+  unplugin-auto-import: ^21.0.0
+  unplugin-dts: 1.0.0-beta.6
+  vite: ^8.0.9
+  vite-bundle-visualizer: ^1.2.1

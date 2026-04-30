@@ -38,26 +38,26 @@
     "taze": "npx taze"
   },
   "dependencies": {
-    "@opentelemetry/api": "^1.9.1",
-    "@opentelemetry/api-logs": "^0.215.0"
+    "@opentelemetry/api": "catalog:",
+    "@opentelemetry/api-logs": "catalog:"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^8.2.0",
-    "@microsoft/api-extractor": "^7.58.7",
-    "@types/node": "^25.6.0",
-    "eslint": "^10.2.1",
-    "eslint-flat-config-utils": "^3.1.0",
-    "eslint-plugin-format": "^2.0.1",
-    "eslint-plugin-oxlint": "^1.62.0",
-    "eslint-plugin-pnpm": "^1.6.0",
-    "eslint-plugin-unicorn": "^64.0.0",
-    "oxlint": "^1.62.0",
-    "taze": "^19.11.0",
-    "typescript": "~6.0.2",
-    "unplugin-auto-import": "^21.0.0",
-    "unplugin-dts": "1.0.0-beta.6",
-    "vite": "^8.0.9",
-    "vite-bundle-visualizer": "^1.2.1"
+    "@antfu/eslint-config": "catalog:",
+    "@microsoft/api-extractor": "catalog:",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "eslint-flat-config-utils": "catalog:",
+    "eslint-plugin-format": "catalog:",
+    "eslint-plugin-oxlint": "catalog:",
+    "eslint-plugin-pnpm": "catalog:",
+    "eslint-plugin-unicorn": "catalog:",
+    "oxlint": "catalog:",
+    "taze": "catalog:",
+    "typescript": "catalog:",
+    "unplugin-auto-import": "catalog:",
+    "unplugin-dts": "catalog:",
+    "vite": "catalog:",
+    "vite-bundle-visualizer": "catalog:"
   },
   "engines": {
     "node": ">=24.14",

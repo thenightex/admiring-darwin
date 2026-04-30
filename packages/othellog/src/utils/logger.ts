@@ -3,7 +3,7 @@ import { logs } from '@opentelemetry/api-logs'
 
 const logger = logs.getLogger('frontend')
 
-export function logError(error: unknown, extra: Record<string, any> = {}): void {
+export function logError(error: unknown, extra: Record<string, unknown> = {}): void {
   const span = trace.getSpan(context.active())
 
   logger.emit({
@@ -19,7 +19,7 @@ export function logError(error: unknown, extra: Record<string, any> = {}): void 
       'span_id': span?.spanContext().spanId,
 
       // useful frontend context
-      'url': window.location.href,
+      'url': globalThis.location.href,
       'user_agent': navigator.userAgent,
 
       ...extra,
@@ -27,7 +27,7 @@ export function logError(error: unknown, extra: Record<string, any> = {}): void 
   })
 }
 
-export function logMessage(message: string, extra: Record<string, any> = {}, errorStack?: string, errorName?: string): void {
+export function logMessage(message: string, extra: Record<string, unknown> = {}, errorStack?: string, errorName?: string): void {
   const span = trace.getSpan(context.active())
 
   logger.emit({
@@ -43,7 +43,7 @@ export function logMessage(message: string, extra: Record<string, any> = {}, err
       'span_id': span?.spanContext().spanId,
 
       // useful frontend context
-      'url': window.location.href,
+      'url': globalThis.location.href,
       'user_agent': navigator.userAgent,
 
       ...extra,
