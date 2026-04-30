@@ -4,64 +4,124 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@antfu/eslint-config':
+      specifier: ^8.2.0
+      version: 8.2.0
+    '@microsoft/api-extractor':
+      specifier: ^7.58.7
+      version: 7.58.7
+    '@opentelemetry/api':
+      specifier: ^1.9.1
+      version: 1.9.1
+    '@opentelemetry/api-logs':
+      specifier: ^0.215.0
+      version: 0.215.0
+    '@types/node':
+      specifier: ^25.6.0
+      version: 25.6.0
+    eslint:
+      specifier: ^10.2.1
+      version: 10.2.1
+    eslint-flat-config-utils:
+      specifier: ^3.1.0
+      version: 3.1.0
+    eslint-plugin-format:
+      specifier: ^2.0.1
+      version: 2.0.1
+    eslint-plugin-oxlint:
+      specifier: ^1.62.0
+      version: 1.62.0
+    eslint-plugin-pnpm:
+      specifier: ^1.6.0
+      version: 1.6.0
+    eslint-plugin-unicorn:
+      specifier: ^64.0.0
+      version: 64.0.0
+    oxlint:
+      specifier: ^1.62.0
+      version: 1.62.0
+    taze:
+      specifier: ^19.11.0
+      version: 19.11.0
+    typescript:
+      specifier: ~6.0.2
+      version: 6.0.3
+    unplugin-auto-import:
+      specifier: ^21.0.0
+      version: 21.0.0
+    unplugin-dts:
+      specifier: 1.0.0-beta.6
+      version: 1.0.0-beta.6
+    vite:
+      specifier: ^8.0.9
+      version: 8.0.9
+    vite-bundle-visualizer:
+      specifier: ^1.2.1
+      version: 1.2.1
+
 importers:
 
   .:
     dependencies:
       '@opentelemetry/api':
-        specifier: ^1.9.1
+        specifier: 'catalog:'
         version: 1.9.1
       '@opentelemetry/api-logs':
-        specifier: ^0.215.0
+        specifier: 'catalog:'
         version: 0.215.0
+      vue:
+        specifier: ^3.5.33
+        version: 3.5.33(typescript@6.0.3)
     devDependencies:
       '@antfu/eslint-config':
-        specifier: ^8.2.0
+        specifier: 'catalog:'
         version: 8.2.0(@typescript-eslint/rule-tester@8.59.0(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3))(@typescript-eslint/typescript-estree@8.59.0(typescript@6.0.3))(@typescript-eslint/utils@8.59.0(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3))(@unocss/eslint-plugin@66.6.8(eslint@10.2.1(jiti@2.6.1))(typescript@6.0.3))(@vue/compiler-sfc@3.5.33)(eslint-plugin-format@2.0.1(eslint@10.2.1(jiti@2.6.1)))(eslint@10.2.1(jiti@2.6.1))(oxlint@1.62.0)(typescript@6.0.3)
       '@microsoft/api-extractor':
-        specifier: ^7.58.7
+        specifier: 'catalog:'
         version: 7.58.7(@types/node@25.6.0)
       '@types/node':
-        specifier: ^25.6.0
+        specifier: 'catalog:'
         version: 25.6.0
       eslint:
-        specifier: ^10.2.1
+        specifier: 'catalog:'
         version: 10.2.1(jiti@2.6.1)
       eslint-flat-config-utils:
-        specifier: ^3.1.0
+        specifier: 'catalog:'
         version: 3.1.0
       eslint-plugin-format:
-        specifier: ^2.0.1
+        specifier: 'catalog:'
         version: 2.0.1(eslint@10.2.1(jiti@2.6.1))
       eslint-plugin-oxlint:
-        specifier: ^1.62.0
+        specifier: 'catalog:'
         version: 1.62.0(oxlint@1.62.0)
       eslint-plugin-pnpm:
-        specifier: ^1.6.0
+        specifier: 'catalog:'
         version: 1.6.0(eslint@10.2.1(jiti@2.6.1))
       eslint-plugin-unicorn:
-        specifier: ^64.0.0
+        specifier: 'catalog:'
         version: 64.0.0(eslint@10.2.1(jiti@2.6.1))
       oxlint:
-        specifier: ^1.62.0
+        specifier: 'catalog:'
         version: 1.62.0
       taze:
-        specifier: ^19.11.0
+        specifier: 'catalog:'
         version: 19.11.0
       typescript:
-        specifier: ~6.0.2
+        specifier: 'catalog:'
         version: 6.0.3
       unplugin-auto-import:
-        specifier: ^21.0.0
+        specifier: 'catalog:'
         version: 21.0.0
       unplugin-dts:
-        specifier: 1.0.0-beta.6
+        specifier: 'catalog:'
         version: 1.0.0-beta.6(@microsoft/api-extractor@7.58.7(@types/node@25.6.0))(typescript@6.0.3)(vite@8.0.9(@types/node@25.6.0)(jiti@2.6.1)(yaml@2.8.3))
       vite:
-        specifier: ^8.0.9
+        specifier: 'catalog:'
         version: 8.0.9(@types/node@25.6.0)(jiti@2.6.1)(yaml@2.8.3)
       vite-bundle-visualizer:
-        specifier: ^1.2.1
+        specifier: 'catalog:'
         version: 1.2.1
 
 packages:
@@ -876,6 +936,20 @@ packages:
   '@vue/compiler-ssr@3.5.33':
     resolution: {integrity: sha512-IErjYdnj1qIupG5xxiVIYiiRvDhGWV4zuh/RCrwfYpuL+HWQzeU6lCk/nF9r7olWMnjKxCAkOctT2qFWFkzb1A==}
 
+  '@vue/reactivity@3.5.33':
+    resolution: {integrity: sha512-p8UfIqyIhb0rYGlSgSBV+lPhF2iUSBcRy7enhTmPqKWadHy9kcOFYF1AejYBP9P+avnd3OBbD49DU4pLWX/94A==}
+
+  '@vue/runtime-core@3.5.33':
+    resolution: {integrity: sha512-UpFF45RI9//a7rvq7RdOQblb4tup7hHG9QsmIrxkFQLzQ7R8/iNQ5LE15NhLZ1/WcHMU2b47u6P33CPUelHyIQ==}
+
+  '@vue/runtime-dom@3.5.33':
+    resolution: {integrity: sha512-IOxMsAOwquhfITgmOgaPYl7/j8gKUxUFoflRc+u4LxyD3+783xne8vNta1PONVCvCV9A0w7hkyEepINDqfO0tw==}
+
+  '@vue/server-renderer@3.5.33':
+    resolution: {integrity: sha512-0xylq/8/h44lVG0pZFknv1XIdEgymq2E9n59uTWJBG+dIgiT0TMCSsxrN7nO16Z0MU0MPjFcguBbZV8Itk52Hw==}
+    peerDependencies:
+      vue: 3.5.33
+
   '@vue/shared@3.5.33':
     resolution: {integrity: sha512-5vR2QIlmaLG77Ygd4pMP6+SGQ5yox9VhtnbDWTy9DzMzdmeLxZ1QqxrywEZ9sa1AVubfIJyaCG3ytyWU81ufcQ==}
 
@@ -1033,6 +1107,9 @@ packages:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
+
+  csstype@3.2.3:
+    resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
@@ -2314,6 +2391,14 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
 
+  vue@3.5.33:
+    resolution: {integrity: sha512-1AgChhx5w3ALgT4oK3acm2Es/7jyZhWSVUfs3rOBlGQC0rjEDkS7G4lWlJJGGNQD+BV3reCwbQrOe1mPNwKHBQ==}
+    peerDependencies:
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   webpack-virtual-modules@0.6.2:
     resolution: {integrity: sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==}
 
@@ -3105,6 +3190,28 @@ snapshots:
       '@vue/compiler-dom': 3.5.33
       '@vue/shared': 3.5.33
 
+  '@vue/reactivity@3.5.33':
+    dependencies:
+      '@vue/shared': 3.5.33
+
+  '@vue/runtime-core@3.5.33':
+    dependencies:
+      '@vue/reactivity': 3.5.33
+      '@vue/shared': 3.5.33
+
+  '@vue/runtime-dom@3.5.33':
+    dependencies:
+      '@vue/reactivity': 3.5.33
+      '@vue/runtime-core': 3.5.33
+      '@vue/shared': 3.5.33
+      csstype: 3.2.3
+
+  '@vue/server-renderer@3.5.33(vue@3.5.33(typescript@6.0.3))':
+    dependencies:
+      '@vue/compiler-ssr': 3.5.33
+      '@vue/shared': 3.5.33
+      vue: 3.5.33(typescript@6.0.3)
+
   '@vue/shared@3.5.33': {}
 
   acorn-jsx@5.3.2(acorn@8.16.0):
@@ -3228,6 +3335,8 @@ snapshots:
       which: 2.0.2
 
   cssesc@3.0.0: {}
+
+  csstype@3.2.3: {}
 
   debug@4.4.3:
     dependencies:
@@ -4696,6 +4805,16 @@ snapshots:
       semver: 7.7.4
     transitivePeerDependencies:
       - supports-color
+
+  vue@3.5.33(typescript@6.0.3):
+    dependencies:
+      '@vue/compiler-dom': 3.5.33
+      '@vue/compiler-sfc': 3.5.33
+      '@vue/runtime-dom': 3.5.33
+      '@vue/server-renderer': 3.5.33(vue@3.5.33(typescript@6.0.3))
+      '@vue/shared': 3.5.33
+    optionalDependencies:
+      typescript: 6.0.3
 
   webpack-virtual-modules@0.6.2: {}
 

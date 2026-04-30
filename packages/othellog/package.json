@@ -1,6 +1,6 @@
 {
   "name": "@thenightex/othellog",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "packageManager": "pnpm@10.33.2",
   "author": {
     "name": "Sascha Hanke",
@@ -39,7 +39,8 @@
   },
   "dependencies": {
     "@opentelemetry/api": "catalog:",
-    "@opentelemetry/api-logs": "catalog:"
+    "@opentelemetry/api-logs": "catalog:",
+    "vue": "catalog:"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",

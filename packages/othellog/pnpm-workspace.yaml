@@ -22,3 +22,4 @@ catalog:
   unplugin-dts: 1.0.0-beta.6
   vite: ^8.0.9
   vite-bundle-visualizer: ^1.2.1
+  vue: ^3.5.33
