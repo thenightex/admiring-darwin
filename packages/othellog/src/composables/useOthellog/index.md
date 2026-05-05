@@ -15,13 +15,20 @@ import { onMounted, useTemplateRef } from 'vue'
 
 const logger = useOthellog()
 
+function doLogs(): void {
+  // TODO add example and implement the test
+  logger.capture
+  logger.captureMessage
+}
+
+/*
 onMounted(() => {
   logger
 })
+*/
 </script>
 
 <template>
-  <div ref="div" />
-  <HelloWorld ref="hello" />
+  <button @click="doLogs">
 </template>
 ```
